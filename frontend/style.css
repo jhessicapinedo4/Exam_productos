@@ -1,12 +1,11 @@
 /* Variables de colores */
 :root {
-  --primary-color: #28a13e;
-  --secondary-color: #62e56a;
+  --primary-color: #0c9e2a;
   --success-color: #003495;
-  --danger-color: #aa1212;
+  --danger-color: #c70a0a;
   --warning-color: #000703;
   --light-color: #f8f9fa;
-  --dark-color: #212529;
+  --dark-color: #000000;
   --gray-color: #6c757d;
   --light-gray: #e9ecef;
   --border-color: #dee2e6;
@@ -20,7 +19,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f7fb;
   color: #333;
   line-height: 1.6;
@@ -41,9 +40,10 @@ header {
 }
 
 header h1 {
-  color: var(--primary-color);
+  color: var(--dark-color);
   font-size: 2.5rem;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 /* Layout principal */
@@ -75,6 +75,7 @@ header h1 {
   color: var(--primary-color);
   margin-bottom: 20px;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 /* Formulario */
@@ -94,8 +95,9 @@ header h1 {
 label {
   display: block;
   margin-bottom: 8px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--dark-color);
+  font-family: 'Poppins', sans-serif;
 }
 
 input, select, textarea {
@@ -105,12 +107,13 @@ input, select, textarea {
   border-radius: 6px;
   font-size: 16px;
   transition: border-color 0.3s;
+  font-family: 'Poppins', sans-serif;
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+  box-shadow: 0 0 0 3px rgba(40, 161, 62, 0.2);
 }
 
 textarea {
@@ -127,6 +130,7 @@ textarea {
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
 }
 
 .btn-primary {
@@ -135,7 +139,7 @@ textarea {
 }
 
 .btn-primary:hover {
-  background-color: var(--secondary-color);
+  background-color: #06ba2a;
 }
 
 .btn-secondary {
@@ -187,6 +191,7 @@ textarea {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>');
   background-repeat: no-repeat;
   background-position: 15px center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .table-container {
@@ -199,6 +204,7 @@ table {
   background: white;
   border-radius: 8px;
   overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
 th, td {
@@ -218,7 +224,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-  background-color: rgba(67, 97, 238, 0.05);
+  background-color: rgba(40, 161, 62, 0.05);
 }
 
 .action-buttons {
@@ -232,6 +238,7 @@ tr:hover {
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .no-data {
@@ -239,6 +246,7 @@ tr:hover {
   padding: 30px;
   color: var(--gray-color);
   font-style: italic;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Modal */
@@ -252,6 +260,7 @@ tr:hover {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  font-family: 'Poppins', sans-serif;
 }
 
 .modal-content {
@@ -281,6 +290,7 @@ tr:hover {
 .modal-header h2 {
   color: var(--primary-color);
   margin: 0;
+  font-weight: 600;
 }
 
 .close {
@@ -288,6 +298,7 @@ tr:hover {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 }
 
 .close:hover {
@@ -361,4 +372,20 @@ tr:hover {
   .detail-label {
     margin-bottom: 5px;
   }
+}
+
+/* Notificaciones */
+.notificacion {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  color: white;
+  z-index: 10000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
