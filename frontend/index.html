@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Productos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Gestión de Productos</h1>
+
+  <!-- Formulario -->
+  <form id="productoForm">
+    <input type="hidden" id="productoId" /> <!-- Para editar -->
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="descripcion" placeholder="Descripción" required>
+    <input type="number" id="precio" placeholder="Precio" step="0.01" required>
+    <input type="number" id="stock" placeholder="Stock" required>
+    <select id="categoria" required>
+      <option value="">Selecciona categoría</option>
+      <option value="Polos">Polos</option>
+      <option value="Pantalones">Pantalones</option>
+      <option value="Zapatillas">Zapatillas</option>
+    </select>
+    <button type="submit">Guardar</button>
+  </form>
+
+  <!-- Tabla de productos -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Categoría</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tablaProductos"></tbody>
+  </table>
+
+  <!-- Modal para ver producto -->
+  <div id="modalProducto" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Detalles del Producto</h2>
+      <p><strong>Nombre:</strong> <span id="verNombre"></span></p>
+      <p><strong>Descripción:</strong> <span id="verDescripcion"></span></p>
+      <p><strong>Precio:</strong> <span id="verPrecio"></span></p>
+      <p><strong>Stock:</strong> <span id="verStock"></span></p>
+      <p><strong>Categoría:</strong> <span id="verCategoria"></span></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
